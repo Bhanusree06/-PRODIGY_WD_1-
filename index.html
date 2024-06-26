@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to right, #00f, #00a);
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+        .navbar.scrolled {
+            background: linear-gradient(to right, #007, #003);
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: color 0.3s, background 0.3s;
+        }
+        .navbar ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #000;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <ul>
+            <li><a href="#">PRODIGY INFOTECH</a></li>
+            <li><a href="#">01</a></li>
+            <li><a href="#">Comillas Negras</a></li>
+            <li><a href="#">Task-01</a></li>
+            <li><a href="#">Responsive Landing Page</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Welcome to the Landing Page</h1>
+        <p>Scroll down to see the navigation menu change color.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin lorem vitae urna facilisis, in bibendum urna aliquam. Ut in arcu eu nulla vehicula ullamcorper. Integer ut est sit amet ligula posuere ultrices nec sit amet augue. Proin quis orci facilisis, bibendum ex vel, volutpat turpis. In vel ligula sit amet libero volutpat varius. Quisque fringilla orci a lorem dapibus, ut malesuada eros feugiat. Ut non volutpat libero, eget tristique lectus. Vivamus et vehicula ex, vel elementum felis. Integer pharetra ex a libero tempor, et commodo lacus tincidunt. In non arcu id arcu gravida lacinia at eget eros. Curabitur sit amet nisi sit amet urna hendrerit consequat. Morbi porttitor justo ac est pretium, quis consectetur felis convallis. Nulla facilisi. Nam vel nulla dapibus, bibendum lorem sit amet, pharetra dui. Integer suscipit lacus id orci cursus scelerisque.</p>
+        <!-- Add more content as needed -->
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
